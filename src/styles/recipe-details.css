@@ -1,0 +1,218 @@
+.recipe-details-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .recipe-details-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .recipe-details-author {
+    color: var(--muted-foreground);
+  }
+  
+  .recipe-details-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .recipe-details-image {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .recipe-details-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .recipe-details-badges {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .recipe-details-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .recipe-details-stat-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 8rem;
+  }
+  
+  .recipe-details-stat-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .recipe-details-stat-label {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+  }
+  
+  .recipe-details-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .recipe-details-ingredients {
+    margin-bottom: 1.5rem;
+  }
+  
+  .recipe-details-ingredients-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .recipe-details-ingredients-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .recipe-details-ingredients-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  
+  .recipe-details-ingredients-item::before {
+    content: "•";
+    margin-right: 0.5rem;
+  }
+  
+  .recipe-details-substitutions {
+    margin-top: 1.5rem;
+  }
+  
+  .recipe-details-substitutions-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .recipe-details-substitutions-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .recipe-details-substitutions-item {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    margin-bottom: 0.25rem;
+  }
+  
+  .recipe-details-substitutions-original {
+    font-weight: 500;
+  }
+  
+  .recipe-details-instructions {
+    margin-bottom: 1.5rem;
+  }
+  
+  .recipe-details-instructions-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .recipe-details-instructions-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: step-counter;
+  }
+  
+  .recipe-details-instructions-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .recipe-details-step-title {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .recipe-details-step-content {
+    color: var(--muted-foreground);
+  }
+  
+  .recipe-details-notes {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  
+  .recipe-details-notes-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .recipe-details-notes-content {
+    color: var(--muted-foreground);
+  }
+  
+  .delete-confirm-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+  
+  .delete-confirm-content {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 28rem;
+  }
+  
+  .delete-confirm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .favorite-active {
+    color: var(--destructive);
+  }
+  
+  @media (min-width: 768px) {
+    .recipe-details-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .recipe-details-content {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
